@@ -1,0 +1,96 @@
+:root {
+  /* Surfaces */
+  --bg: #F0F6FA;            /* SatuSehat clean light blue-gray */
+  --bg-app: #F0F6FA;
+  --surface: #FFFFFF;
+  --surface-muted: #F1F5F9;
+  --surface-subtle: #F8FAFC;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --border-light: #F1F5F9;
+
+  /* Text */
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* SatuSehat & Kemenkes Brand Colors */
+  --satusehat-teal: #00A99D;
+  --satusehat-cyan: #00B4D8;
+  --satusehat-lime: #84CC16;
+  --satusehat-blue: #0284C7;
+  --satusehat-header: linear-gradient(180deg, #D6EDFC 0%, #EBF5FD 55%, #FFFFFF 100%);
+  --satusehat-card-green: linear-gradient(135deg, #00A86B 0%, #008E5A 100%);
+
+  /* BPJS & Product Brand Accent */
+  --accent: #008272;
+  --accent-hover: #006654;
+  --accent-soft: #E6F6F4;
+  --bpjs-teal: #008272;
+  --bpjs-teal-dark: #005E52;
+  --bpjs-blue: #0A66C2;
+  --bpjs-gradient: linear-gradient(135deg, #00A99D 0%, #008272 60%, #005E52 100%);
+
+  /* Risk semantics */
+  --risk-high: #E11D48;
+  --risk-high-soft: #FFE4E6;
+  --risk-medium: #D97706;
+  --risk-medium-soft: #FEF3C7;
+  --risk-low: #059669;
+  --risk-low-soft: #D1FAE5;
+
+  /* Status */
+  --status-new: #0284C7;
+  --status-new-bg: #E0F2FE;
+  --status-review: #D97706;
+  --status-review-bg: #FEF3C7;
+  --status-validated: #E11D48;
+  --status-validated-bg: #FFE4E6;
+  --status-dismissed: #64748B;
+  --status-dismissed-bg: #F1F5F9;
+  --status-escalated: #7C3AED;
+  --status-escalated-bg: #EDE9FE;
+
+  /* Graph palette */
+  --node-patient: #FFFFFF;
+  --node-patient-stroke: #9CA3AF;
+  --node-claim: #E0F2FE;
+  --node-claim-stroke: #0284C7;
+  --node-claim-focused: #EA580C;
+  --node-nakes: #0284C7;
+  --node-facility: #059669;
+  --node-code: #F3F4F6;
+  --edge-normal: #CBD5E1;
+  --edge-evidence: #EA580C;
+
+  /* Typography */
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Monaco, monospace;
+
+  /* Shape and spacing */
+  --radius-xs: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Elevation (used sparingly according to PRD) */
+  --shadow-sm: 0 1px 3px rgba(31, 29, 26, 0.05);
+  --shadow-md: 0 4px 12px rgba(31, 29, 26, 0.08);
+  --shadow-lg: 0 8px 24px rgba(31, 29, 26, 0.12);
+  --shadow-modal: 0 16px 36px rgba(0, 0, 0, 0.2);
+
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px #2F5D50;
+}

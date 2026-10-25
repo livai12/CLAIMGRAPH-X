@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-subtle);
+}
+
+/* Button & interactive focus */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Utilities */
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Mobile Frame Container Styling */
+.mobile-device-frame {
+  max-width: 420px;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 44px;
+  box-shadow: 0 25px 60px -15px rgba(0, 50, 100, 0.2), 0 0 0 10px #1E293B, 0 0 0 12px #94A3B8;
+  overflow: hidden;
+  position: relative;
+  margin: 12px auto 30px auto;
+  border: 4px solid #0F172A;
+}
+
+.mobile-notch {
+  width: 130px;
+  height: 24px;
+  background: #0F172A;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.mobile-speaker {
+  width: 42px;
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+}
