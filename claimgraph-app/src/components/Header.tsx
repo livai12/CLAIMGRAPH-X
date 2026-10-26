@@ -24,6 +24,8 @@ interface HeaderProps {
   viewMode: 'mobile-mockup' | 'desktop-workstation';
   onViewModeChange: (mode: 'mobile-mockup' | 'desktop-workstation') => void;
   onSearchFocus?: () => void;
+  activeDataset?: 'bpjs2025' | 'synthetic';
+  onToggleDataset?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -33,6 +35,8 @@ export const Header: React.FC<HeaderProps> = ({
   onLogout,
   viewMode,
   onViewModeChange,
+  activeDataset = 'bpjs2025',
+  onToggleDataset,
 }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -138,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         <div className="hidden sm:block">
-          <SyntheticBadge size="sm" />
+          <SyntheticBadge size="sm" dataset={activeDataset} onToggle={onToggleDataset} />
         </div>
 
         {/* User Profile & Account Switcher Dropdown */}

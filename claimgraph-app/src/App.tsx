@@ -5,6 +5,11 @@ import {
   INITIAL_INVESTIGATION, 
   INITIAL_AUDIT_LOG 
 } from './data/mockData';
+import { 
+  BPJS_2025_CLAIMS, 
+  BPJS_2025_COMMUNITIES, 
+  BPJS_2025_DEFAULT_COMMUNITY 
+} from './data/bpjs2025Data';
 import { GOVERNMENT_USERS } from './data/authUsers';
 import { Claim, Role, InvestigationCase, AuditEntry, AuthenticatedUser } from './types';
 import { Header } from './components/Header';
@@ -28,15 +33,32 @@ import { ShieldCheck, Lock } from 'lucide-react';
 export function App() {
   const [currentUser, setCurrentUser] = useState<AuthenticatedUser | null>(GOVERNMENT_USERS[0]);
   const [isSecurityModalOpen, setIsSecurityModalOpen] = useState<boolean>(false);
-  const [claims, setClaims] = useState<Claim[]>(INITIAL_CLAIMS);
+  const [activeDataset, setActiveDataset] = useState<'bpjs2025' | 'synthetic'>('bpjs2025');
+  const [claims, setClaims] = useState<Claim[]>(
+    BPJS_2025_CLAIMS && BPJS_2025_CLAIMS.length > 0 ? BPJS_2025_CLAIMS : INITIAL_CLAIMS
+  );
   const [currentTab, setCurrentTab] = useState<string>('dashboard');
-  const [selectedClaimId, setSelectedClaimId] = useState<string>('C-10291');
+  const [selectedClaimId, setSelectedClaimId] = useState<string>(
+    BPJS_2025_CLAIMS && BPJS_2025_CLAIMS.length > 0 ? BPJS_2025_CLAIMS[0].claimId : 'C-10291'
+  );
   const [currentRole, setCurrentRole] = useState<Role>('investigator');
   const [viewMode, setViewMode] = useState<'mobile-mockup' | 'desktop-workstation'>('mobile-mockup');
   const [investigationCase, setInvestigationCase] = useState<InvestigationCase>(INITIAL_INVESTIGATION);
   const [auditEntries, setAuditEntries] = useState<AuditEntry[]>(INITIAL_AUDIT_LOG);
 
   const selectedClaim = claims.find((c) => c.claimId === selectedClaimId) || claims[0];
+
+  const handleToggleDataset = () => {
+    if (activeDataset === 'bpjs2025') {
+      setActiveDataset('synthetic');
+      setClaims(INITIAL_CLAIMS);
+      setSelectedClaimId(INITIAL_CLAIMS[0].claimId);
+    } else {
+      setActiveDataset('bpjs2025');
+      setClaims(BPJS_2025_CLAIMS);
+      setSelectedClaimId(BPJS_2025_CLAIMS[0]?.claimId || 'C-10291');
+    }
+  };
 
   // Login handler
   const handleLogin = (user: AuthenticatedUser) => {
@@ -178,9 +200,12 @@ export function App() {
           />
         );
       case 'graph':
+        const currentNetwork = activeDataset === 'bpjs2025'
+          ? (BPJS_2025_COMMUNITIES[selectedClaim?.networkId || `NET-${selectedClaimId}`] || BPJS_2025_DEFAULT_COMMUNITY)
+          : NETWORK_K04;
         return (
           <GraphView
-            networkData={NETWORK_K04}
+            networkData={currentNetwork}
             onBack={() => handleNavigate('claim', selectedClaimId)}
             onOpenClaim={(id) => handleNavigate('claim', id)}
             onStartInvestigation={() => handleNavigate('investigation')}
@@ -257,6 +282,8 @@ export function App() {
         onLogout={handleLogout}
         viewMode={viewMode}
         onViewModeChange={setViewMode}
+        activeDataset={activeDataset}
+        onToggleDataset={handleToggleDataset}
       />
 
       {/* Main Presentation Layout */}

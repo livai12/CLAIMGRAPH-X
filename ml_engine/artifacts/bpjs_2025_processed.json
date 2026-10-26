@@ -1,0 +1,764 @@
+{
+  "stats": {
+    "datasetName": "Data Sampel Resmi BPJS Kesehatan Edisi Rilis 2025",
+    "totalProcessedClaims": 5000,
+    "totalFinancialValue": 3972177140,
+    "anomalyRatioPercent": 1.4,
+    "potentialSavings": 0,
+    "highRiskCount": 0,
+    "mediumRiskCount": 70,
+    "topRiskClaimsCount": 50
+  },
+  "claims": [
+    {
+      "claimId": "C-005465",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-3EF531",
+      "practitionerName": "dr. Spesialis Missing",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "22 Jun 2024",
+      "submissionDate": "24 Jun 2024",
+      "claimAmount": 4780400,
+      "riskScore": 61,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.61,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 22.8,
+        "graphScore": 13.6,
+        "temporalScore": 9.0
+      },
+      "diagnosisCode": "I500",
+      "diagnosisDesc": "Congestive heart failure",
+      "procedureCodes": [
+        "87.49"
+      ],
+      "explanation": {
+        "why": "Klaim C-005465 ditandai berisiko 61/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis I500, kode INA-CBG I-4-20-I, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-2146",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis I500 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "22 Jun",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli Missing.",
+          "isCurrent": false
+        },
+        {
+          "date": "22 Jun",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis I500",
+          "description": "Congestive heart failure. Prosedur: 87.49.",
+          "isCurrent": true
+        },
+        {
+          "date": "24 Jun 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode I-4-20-I (ANGINA PEKTORIS DAN NYERI DADA  RINGAN) senilai Rp4,780,400.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 61/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-005465",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-017038",
+      "patientId": "PST-9A3C08",
+      "practitionerId": "NAKES-214433",
+      "practitionerName": "dr. Spesialis Missing",
+      "facilityId": "FKRTL-97694B",
+      "facilityType": "FKRTL",
+      "serviceDate": "24 Apr 2024",
+      "submissionDate": "26 Apr 2024",
+      "claimAmount": 12364200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 25.0,
+        "graphScore": 10.7,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "S820",
+      "diagnosisDesc": "Fracture of patella",
+      "procedureCodes": [
+        "80.26"
+      ],
+      "explanation": {
+        "why": "Klaim C-017038 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis S820, kode INA-CBG M-1-60-I, serta pola relasi pada RS Kelas A KOTA BANDA ACEH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas A KOTA BANDA ACEH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-1014",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis S820 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "24 Apr",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas A KOTA BANDA ACEH",
+          "description": "Pasien PST-9A3C08 didaftarkan pada poli Missing.",
+          "isCurrent": false
+        },
+        {
+          "date": "24 Apr",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis S820",
+          "description": "Fracture of patella. Prosedur: 80.26.",
+          "isCurrent": true
+        },
+        {
+          "date": "26 Apr 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode M-1-60-I (PROSEDUR SISTEM MUSKULOSKLETAL & JARINGAN PENGHUBUNG LAIN-LAIN (RINGAN)) senilai Rp12,364,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-017038",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-009160",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-3EF531",
+      "practitionerName": "dr. Spesialis Missing",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "29 Oct 2024",
+      "submissionDate": "31 Oct 2024",
+      "claimAmount": 4195900,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 22.0,
+        "graphScore": 13.7,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "J44",
+      "diagnosisDesc": "Other chronic obstructive pulmonary disease",
+      "procedureCodes": [
+        "87.49"
+      ],
+      "explanation": {
+        "why": "Klaim C-009160 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis J44, kode INA-CBG J-4-17-I, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-1921",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis J44 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "29 Oct",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli Missing.",
+          "isCurrent": false
+        },
+        {
+          "date": "29 Oct",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis J44",
+          "description": "Other chronic obstructive pulmonary disease. Prosedur: 87.49.",
+          "isCurrent": true
+        },
+        {
+          "date": "31 Oct 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-4-17-I (PENYAKIT  PARU OBSTRUKTIF KRONIS RINGAN) senilai Rp4,195,900.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-009160",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-004168",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "15 Oct 2024",
+      "submissionDate": "17 Oct 2024",
+      "claimAmount": 356200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.8,
+        "graphScore": 15.3,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "J44",
+      "diagnosisDesc": "Other chronic obstructive pulmonary disease",
+      "procedureCodes": [
+        "93.94"
+      ],
+      "explanation": {
+        "why": "Klaim C-004168 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis J44, kode INA-CBG J-3-13-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-1976",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis J44 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "15 Oct",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Oct",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis J44",
+          "description": "Other chronic obstructive pulmonary disease. Prosedur: 93.94.",
+          "isCurrent": true
+        },
+        {
+          "date": "17 Oct 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-3-13-0 (PROSEDUR TERAPI SALURAN PERNAFASAN) senilai Rp356,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-004168",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-000035",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "01 Oct 2024",
+      "submissionDate": "03 Oct 2024",
+      "claimAmount": 356200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.8,
+        "graphScore": 14.9,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "J44",
+      "diagnosisDesc": "Other chronic obstructive pulmonary disease",
+      "procedureCodes": [
+        "93.94"
+      ],
+      "explanation": {
+        "why": "Klaim C-000035 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis J44, kode INA-CBG J-3-13-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-1997",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis J44 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "01 Oct",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "01 Oct",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis J44",
+          "description": "Other chronic obstructive pulmonary disease. Prosedur: 93.94.",
+          "isCurrent": true
+        },
+        {
+          "date": "03 Oct 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-3-13-0 (PROSEDUR TERAPI SALURAN PERNAFASAN) senilai Rp356,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-000035",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-000387",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "02 Jul 2024",
+      "submissionDate": "04 Jul 2024",
+      "claimAmount": 356200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.8,
+        "graphScore": 15.4,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "I500",
+      "diagnosisDesc": "Congestive heart failure",
+      "procedureCodes": [
+        "93.94"
+      ],
+      "explanation": {
+        "why": "Klaim C-000387 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis I500, kode INA-CBG J-3-13-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-2004",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis I500 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "02 Jul",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "02 Jul",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis I500",
+          "description": "Congestive heart failure. Prosedur: 93.94.",
+          "isCurrent": true
+        },
+        {
+          "date": "04 Jul 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-3-13-0 (PROSEDUR TERAPI SALURAN PERNAFASAN) senilai Rp356,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-000387",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-000372",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "03 Sep 2024",
+      "submissionDate": "05 Sep 2024",
+      "claimAmount": 356200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.8,
+        "graphScore": 14.8,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "J44",
+      "diagnosisDesc": "Other chronic obstructive pulmonary disease",
+      "procedureCodes": [
+        "93.94"
+      ],
+      "explanation": {
+        "why": "Klaim C-000372 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis J44, kode INA-CBG J-3-13-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-2034",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis J44 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "03 Sep",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "03 Sep",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis J44",
+          "description": "Other chronic obstructive pulmonary disease. Prosedur: 93.94.",
+          "isCurrent": true
+        },
+        {
+          "date": "05 Sep 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-3-13-0 (PROSEDUR TERAPI SALURAN PERNAFASAN) senilai Rp356,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-000372",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-001232",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "06 Feb 2024",
+      "submissionDate": "08 Feb 2024",
+      "claimAmount": 356200,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.8,
+        "graphScore": 15.5,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "R10",
+      "diagnosisDesc": "Abdominal and pelvic pain",
+      "procedureCodes": [
+        "93.94"
+      ],
+      "explanation": {
+        "why": "Klaim C-001232 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis R10, kode INA-CBG J-3-13-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-2116",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis R10 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "06 Feb",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "06 Feb",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis R10",
+          "description": "Abdominal and pelvic pain. Prosedur: 93.94.",
+          "isCurrent": true
+        },
+        {
+          "date": "08 Feb 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode J-3-13-0 (PROSEDUR TERAPI SALURAN PERNAFASAN) senilai Rp356,200.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-001232",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-002525",
+      "patientId": "PST-CDE627",
+      "practitionerId": "NAKES-2DA6B0",
+      "practitionerName": "dr. Sp.P (Paru)",
+      "facilityId": "FKRTL-666DD2",
+      "facilityType": "FKRTL",
+      "serviceDate": "10 Sep 2024",
+      "submissionDate": "12 Sep 2024",
+      "claimAmount": 207900,
+      "riskScore": 57,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.57,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 17.6,
+        "graphScore": 18.4,
+        "temporalScore": 5.0
+      },
+      "diagnosisCode": "J44",
+      "diagnosisDesc": "Other chronic obstructive pulmonary disease",
+      "procedureCodes": [
+        "PRO-NON-SPESIFIK"
+      ],
+      "explanation": {
+        "why": "Klaim C-002525 ditandai berisiko 57/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis J44, kode INA-CBG Q-5-44-0, serta pola relasi pada RS Kelas B ACEH TENGAH.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas B ACEH TENGAH."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-1886",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis J44 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "10 Sep",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas B ACEH TENGAH",
+          "description": "Pasien PST-CDE627 didaftarkan pada poli PAR.",
+          "isCurrent": false
+        },
+        {
+          "date": "10 Sep",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis J44",
+          "description": "Other chronic obstructive pulmonary disease. Prosedur: PRO-NON-SPESIFIK.",
+          "isCurrent": true
+        },
+        {
+          "date": "12 Sep 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode Q-5-44-0 (PENYAKIT KRONIS KECIL LAIN-LAIN) senilai Rp207,900.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 57/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-002525",
+      "isSeedDemo": false
+    },
+    {
+      "claimId": "C-005331",
+      "patientId": "PST-45564B",
+      "practitionerId": "NAKES-157D7B",
+      "practitionerName": "dr. Spesialis Missing",
+      "facilityId": "FKRTL-7F945B",
+      "facilityType": "FKRTL",
+      "serviceDate": "20 Jul 2024",
+      "submissionDate": "22 Jul 2024",
+      "claimAmount": 4393000,
+      "riskScore": 56,
+      "riskLevel": "MEDIUM",
+      "primaryPattern": "possible_repeat_billing",
+      "patternLabel": "Klaim Berulang (Repeat Billing)",
+      "status": "NEW",
+      "priorityScore": 0.56,
+      "signals": {
+        "ruleScore": 16.0,
+        "statisticalScore": 20.2,
+        "graphScore": 10.6,
+        "temporalScore": 9.0
+      },
+      "diagnosisCode": "I63",
+      "diagnosisDesc": "Cerebral infarction",
+      "procedureCodes": [
+        "87.49"
+      ],
+      "explanation": {
+        "why": "Klaim C-005331 ditandai berisiko 56/100 (Klaim Berulang (Repeat Billing)) berdasarkan kombinasi diagnosis I63, kode INA-CBG G-4-26-I, serta pola relasi pada RS Kelas C PIDIE.",
+        "thresholdNote": "Deviasi multi-sinyal melampaui batas ambang standar investigasi JKN.",
+        "nextStep": "Lakukan verifikasi rekam medis elektronik dan kesesuaian berkas penagihan di RS Kelas C PIDIE."
+      },
+      "evidenceList": [
+        {
+          "id": "ev-rb-3556",
+          "category": "Waktu",
+          "text": "Kunjungan berulang untuk pasien yang sama dan diagnosis I63 terjadi dalam rentang <= 4 hari pada faskes yang sama.",
+          "ruleId": "R-RB-02",
+          "strength": "Kuat"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "20 Jul",
+          "time": "08.30",
+          "title": "Penerimaan Layanan di RS Kelas C PIDIE",
+          "description": "Pasien PST-45564B didaftarkan pada poli Missing.",
+          "isCurrent": false
+        },
+        {
+          "date": "20 Jul",
+          "time": "10.15",
+          "title": "Penetapan Diagnosis I63",
+          "description": "Cerebral infarction. Prosedur: 87.49.",
+          "isCurrent": true
+        },
+        {
+          "date": "22 Jul 2024",
+          "time": "14.00",
+          "title": "Pengajuan E-Klaim INA-CBG",
+          "description": "Kode G-4-26-I (GANGUAN-PENYAKIT SISTEM PERNAFASAN LAIN-LAIN (RINGAN)) senilai Rp4,393,000.",
+          "isCurrent": false
+        },
+        {
+          "date": "15 Okt",
+          "time": "06.00",
+          "title": "Analisis Multi-Sinyal CLAIMGRAPH-X",
+          "description": "Terdeteksi sinyal risiko 56/100 (Klaim Berulang (Repeat Billing)).",
+          "isCurrent": false
+        }
+      ],
+      "networkId": "NET-C-005331",
+      "isSeedDemo": false
+    }
+  ],
+  "communities": [
+    "NET-C-005465",
+    "NET-C-017038",
+    "NET-C-009160",
+    "NET-C-004168",
+    "NET-C-000035",
+    "NET-C-000387",
+    "NET-C-000372",
+    "NET-C-001232"
+  ]
+}
